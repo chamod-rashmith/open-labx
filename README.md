@@ -33,17 +33,17 @@ The system consists of three main components:
 
 ```mermaid
 graph TD
-    subgraph Developer [1. Developer Environment]
+    subgraph Developer ["1. Developer Environment"]
         A["Standard Web Assets (HTML5, CSS, JS)"] --> B["manifest.json Metadata"]
         B --> C["Package into .olx Zip Archive"]
     end
 
-    subgraph Marketplace [2. OpenLabX Marketplace Backend (Supabase)]
+    subgraph Marketplace ["2. OpenLabX Marketplace Backend (Supabase)"]
         D["Supabase Storage (Stores .olx files)"]
         E["PostgreSQL DB (Metadata, Ratings, Creators)"]
     end
 
-    subgraph HostApp [3. OpenLabX Host App (Mobile Container)]
+    subgraph HostApp ["3. OpenLabX Host App (Mobile Container)"]
         F["In-App Marketplace Browser"] --> G["Lab Downloader / Manager"]
         G --> H["Secure Extraction & Sandbox Storage"]
         H --> I["Isolated Local WebView (Offline Run)"]
